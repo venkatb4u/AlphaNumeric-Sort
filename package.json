@@ -1,0 +1,11 @@
+{
+  "name": "AlphaNumeric_Sort",
+  "version": "0.0.0",
+  "description": "An API that sorts an array containing alpha numeric values",
+  "repository": "",
+  "start": ["server.js"],
+  "author": "Venkat",
+  "dependencies": {
+    "express": "*"
+  }
+}

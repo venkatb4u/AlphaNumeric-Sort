@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Alpha-Numeric Sort</title>
+		<link href="css/index.css" rel="stylesheet" media="all" />
+		<script src="js/JSLitmus.js"></script>
+		<script src="js/alphanum_sort.js"></script>
+		
+	</head>
+	
+
+	<body>
+		
+		<header>
+			<h1> Alpha-Numeric Array Sort <span>- a 'Merge Sort' way of implementation</span> </h1>
+		</header>
+		<section id="sortSample"></section>
+		<section id="performance_calc">
+			<section id="jslitmus_container"></section>
+		</section>
+		<footer><p>Copyrights &copy; 2015. | Developer -  <a href="https://github.com/venkatb4u" target="_blank">Venkat</a></p></footer>
+		
+		<script>
+			var arr = arr1 = [
+    			"parthiban",
+    			"alphanum89",
+    			"Venkat",
+    			"Radhika",
+    			"77",
+    			"82string",
+    			"jeba",
+    			"Saravanan",
+    			"23",
+    			"hi",
+    			"1",
+    			"9"
+    		],
+    		samp = [
+    			"89",
+    			"2string",
+    			"venkat89",
+    			"9"
+    			],
+    		sortSampleDOM = document.getElementById('sortSample');
+    		sortSampleDOM.innerHTML = "<b>Original Array</b> ==> [" + arr1 + "]<br>"
+    								  + "<b>Expected Output</b> ==> [" + arr1.alphaNumSort() + "]<br>"
+    								  + "-------------------------------<br>"
+    								  + "<b>Sorted using native sort()</b> ==> [" + arr1.sort() + "] <span class='wrong'></span><br>"
+    								  + "<b>Sorted using alphaNumSort()</b> ==> [" + arr.alphaNumSort() + "] <span class='correct'></span><br>"
+    								  + "-------------------------------<br>";
+    		
+    	   
+    	   JSLitmus.test('Merge Sort ==> [array].alphaNumSort()', function() {
+			  arr.alphaNumSort();
+		   });
+		   JSLitmus.test('Native Sort ==> [array].sort()', function() {
+			  arr.sort();
+		   });
+		   document.getElementById('performance_calc').innerHTML += "<span>*Native sort has the upper-hand when it comes to op/sec, but fails to support custom sort i.e. alphaNumeric sort</span>";
+		   
+		</script>
+	</body>
+</html>
